@@ -12,29 +12,48 @@
         <div class="inner">
             <form class="inner" action="">
                 <p>Name</p>
-                <input type="text" name="name" value="Enter your name">
+                <input type="text" name="name" placeholder="Enter your name" required>
                 <p>Email</p>
-                <input type="text" name="name" value="Enter your Email">
+                <input type="text" name="email" placeholder="Enter your Email" required>
                 <p>Age (optional)</p>
-                <input type="text" name="name" value="Enter your age">
+                <input type="text" name="age" placeholder="Enter your age">
                 <p>Which option best describes your current role?</p>
                 <select>
+                    <option disabled selected>Select current role</option>
                     <option>Student</option>
                     <option>Full-time job</option>
                     <option>Full-time learner</option>
                     <option>Prefer not to say</option>
                     <option>Other</option>
-                </select>
-            </form>    
-                <p>Would you recommend freeCodeCamp to a friend?</p>
-                <form action="">
-                    <input type="radio" name="recommend" value="Definitely" checked>
-                    <input type="radio" name="recommend" value="Maybe">
-                    <input type="radio" name="recommend" value="Not sure">
-                </form>
-                <p>What is your favorite feature of freeCodeCamp?</p>
+                </select>   
+                <p>Would you recommend fedyshysm to a friend?</p>
+                <label for="definitely"><input id="definitely" type="radio" name="recommend" value="Definitely" checked>Definitely</label><br>
+                <label for="maybe"><input id="maybe" type="radio" name="recommend" value="Maybe">Maybe</label><br>
+                <label for="not-sure"><input id="not-sure" type="radio" name="recommend" value="Not sure">Not sure</label><br>
+                <p>What is your favorite feature of fedyshysm?</p>
+                <select>
+                    <option disabled selected>Select an option</option>
+                    <option>Challenges</option>
+                    <option>Projects</option>
+                    <option>Community</option>
+                    <option>Open source</option>
+                </select>   
                 <p>What would you like to see improved? (Check all that apply)</p>
+                <label for="frontend"><input id="frontend" type="checkbox" name="frontend">Front-end Projects</label><br>
+                <label for="backend"><input id="backend" type="checkbox" name="backend">Back-end Projects</label><br>
+                <label for="data"><input id="data" type="checkbox" name="data">Data Visualization</label><br>
+                <label for="challenges"><input id="challenges" type="checkbox" name="challenges">Challenges</label><br>
+                <label for="community"><input id="community" type="checkbox" name="community">Open Source Community</label><br>
+                <label for="rooms"><input id="rooms" type="checkbox" name="rooms">Gitter help rooms</label><br>
+                <label for="videos"><input id="videos" type="checkbox" name="videos">Videos</label><br>
+                <label for="meetups"><input id="meetups" type="checkbox" name="meetups">City Meetups</label><br>
+                <label for="wiki"><input id="wiki" type="checkbox" name="wiki">Wiki</label><br>
+                <label for="forum"><input id="forum" type="checkbox" name="forum">Forum</label><br>
+                <label for="courses"><input id="courses" type="checkbox" name="courses">Additional Courses</label><br>
                 <p>Any comments or suggestions?</p>
+                <textarea name="suggestion" placeholder="Enter your comment here..."></textarea><br>
+                <button type="submit">Submit</button>
+            </form> 
         </div>
     </div>
 </body>
