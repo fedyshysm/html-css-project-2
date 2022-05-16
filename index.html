@@ -26,6 +26,7 @@
             color: whitesmoke;
             font-weight: 300;
             font-size: 20px;
+            margin-left: 10px;
         }
         label {
             font-family: "Fira Sans";
@@ -39,6 +40,17 @@
             font-weight: 100;
             font-size: 17px;
         }    
+        .info {
+            padding: 10px;
+            width: 91%;
+            margin-left: 10px;
+            border-style: solid;
+            border-radius: 6px;
+            border-color: whitesmoke;
+        }
+        .recommend {
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -48,11 +60,11 @@
         <div class="inner">
             <form action="">
                 <p>Name</p>
-                <input type="text" name="name" placeholder="Enter your name" required>
+                <input class="info" type="text" name="name" placeholder="Enter your name" required>
                 <p>Email</p>
-                <input type="text" name="email" placeholder="Enter your Email" required>
+                <input class="info" type="text" name="email" placeholder="Enter your Email" required>
                 <p>Age <nobr class="nobr">(optional)</nobr></p> 
-                <input type="text" name="age" placeholder="Enter your age">
+                <input class="info" type="text" name="age" placeholder="Enter your age">
                 <p>Which option best describes your current role?</p>
                 <select>
                     <option disabled selected>Select current role</option>
@@ -63,9 +75,9 @@
                     <option>Other</option>
                 </select>   
                 <p>Would you recommend fedyshysm to a friend?</p>
-                <label for="definitely"><input id="definitely" type="radio" name="recommend" value="Definitely" checked>Definitely</label><br>
-                <label for="maybe"><input id="maybe" type="radio" name="recommend" value="Maybe">Maybe</label><br>
-                <label for="not-sure"><input id="not-sure" type="radio" name="recommend" value="Not sure">Not sure</label><br>
+                <label for="definitely"><input class="recommend" id="definitely" type="radio" name="recommend" value="Definitely" checked>Definitely</label><br>
+                <label for="maybe"><input class="recommend" id="maybe" type="radio" name="recommend" value="Maybe">Maybe</label><br>
+                <label for="not-sure"><input class="recommend" id="not-sure" type="radio" name="recommend" value="Not sure">Not sure</label><br>
                 <p>What is your favorite feature of fedyshysm?</p>
                 <select>
                     <option disabled selected>Select an option</option>
