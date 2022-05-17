@@ -13,14 +13,21 @@
             background-color: #06123dd4;
             border-radius: 4px;
             margin: 0 auto;
-            width: 550px;
-            padding: 2px 10px 10px;
+            width: 560px;
+            padding: 20px 8px 20px 10px;
         }
-        .title {
+        #title {
             text-align: center;
             color: #06123d;
             font-family: "Fira Sans", sans-serif;
             font-weight: 500;
+        }
+        #description {
+            text-align: center;
+            color: #06123d;
+            font-family: "Fira Sans", sans-serif;
+            font-weight: 500;
+            font-size: 25px;
         }
         p {
             font-family: "Fira Sans", sans-serif;
@@ -36,6 +43,27 @@
             font-size: 17px;
             cursor: pointer;
         }
+        #name-label {
+            font-family: "Fira Sans", sans-serif;
+            color: whitesmoke;
+            font-weight: 300;
+            font-size: 20px;
+            margin-left: 10px;    
+        }
+        #email-label {
+            font-family: "Fira Sans", sans-serif;
+            color: whitesmoke;
+            font-weight: 300;
+            font-size: 20px;
+            margin-left: 10px; 
+        }
+        #number-label {
+            font-family: "Fira Sans", sans-serif;
+            color: whitesmoke;
+            font-weight: 300;
+            font-size: 20px;
+            margin-left: 10px; 
+        }
         .nobr {
             font-family: "Fira Sans", sans-serif;
             color: whitesmoke;
@@ -49,6 +77,8 @@
             border-style: solid;
             border-radius: 6px;
             border-color: whitesmoke;
+            margin-top: 7px;
+            margin-bottom: 15px;
         }
         .radio-input {
             display: none;
@@ -149,18 +179,15 @@
 </head>
 <body>
     <div class="outer">
-        <h1 class="title">fedyshysm Survey Form</h1>
-        <h2 class="title">Thank you for taking the time to help us improve the world</h2>   
+        <h1 id="title">fedyshysm Survey Form</h1>
+        <p id="description">Thank you for taking the time to help us improve the world</p>   
         <div class="inner">
-            <form action="">
-                <p>Name</p>
-                <input class="info" type="text" name="name" placeholder="Enter your name" required>
-                <p>Email</p>
-                <input class="info" type="text" name="email" placeholder="Enter your Email" required>
-                <p>Age <nobr class="nobr">(optional)</nobr></p> 
-                <input class="info" type="text" name="age" placeholder="Enter your age">
+            <form id="survey-form" action="">
+                <label id="name-label">Name</label><input class="info" id="name" type="text" name="name" placeholder="Enter your name" required>
+                <label id="email-label">Email</label><input class="info" id="email" type="email" name="email" placeholder="Enter your Email" required>
+                <label id="number-label">Age <nobr class="nobr">(optional)</nobr></label> <input class="info" id="number" type="number" name="age" min="14" max="120" placeholder="Enter your age">
                 <p>Which option best describes your current role?</p>
-                <select>
+                <select id="dropdown">
                     <option disabled selected>Select current role</option>
                     <option>Student</option>
                     <option>Full-time job</option>
@@ -181,17 +208,17 @@
                     <option>Open source</option>
                 </select>   
                 <p>What would you like to see improved? <nobr class="nobr">(Check all that apply)</nobr></p>
-                <label for="frontend"><input class="check" id="frontend" type="checkbox" name="frontend"><div class="checkbox-input"></div>Front-end Projects</label><br>
-                <label for="backend"><input class="check" id="backend" type="checkbox" name="backend"><div class="checkbox-input"></div>Back-end Projects</label><br>
-                <label for="data"><input class="check" id="data" type="checkbox" name="data"><div class="checkbox-input"></div>Data Visualization</label><br>
-                <label for="challenges"><input class="check" id="challenges" type="checkbox" name="challenges"><div class="checkbox-input"></div>Challenges</label><br>
-                <label for="community"><input class="check" id="community" type="checkbox" name="community"><div class="checkbox-input"></div>Open Source Community</label><br>
-                <label for="rooms"><input class="check" id="rooms" type="checkbox" name="rooms"><div class="checkbox-input"></div>Gitter help rooms</label><br>
-                <label for="videos"><input class="check" id="videos" type="checkbox" name="videos"><div class="checkbox-input"></div>Videos</label><br>
-                <label for="meetups"><input class="check" id="meetups" type="checkbox" name="meetups"><div class="checkbox-input"></div>City Meetups</label><br>
-                <label for="wiki"><input class="check" id="wiki" type="checkbox" name="wiki"><div class="checkbox-input"></div>Wiki</label><br>
-                <label for="forum"><input class="check" id="forum" type="checkbox" name="forum"><div class="checkbox-input"></div>Forum</label><br>
-                <label for="courses"><input class="check" id="courses" type="checkbox" name="courses"><div class="checkbox-input"></div>Additional Courses</label><br>
+                <label for="frontend"><input class="check" id="frontend" type="checkbox" name="frontend" value="frontend"><div class="checkbox-input"></div>Front-end Projects</label><br>
+                <label for="backend"><input class="check" id="backend" type="checkbox" name="backend" value="backend"><div class="checkbox-input"></div>Back-end Projects</label><br>
+                <label for="data"><input class="check" id="data" type="checkbox" name="data" value="data"><div class="checkbox-input"></div>Data Visualization</label><br>
+                <label for="challenges"><input class="check" id="challenges" type="checkbox" name="challenges" value="challenges"><div class="checkbox-input"></div>Challenges</label><br>
+                <label for="community"><input class="check" id="community" type="checkbox" name="community" value="community"><div class="checkbox-input"></div>Open Source Community</label><br>
+                <label for="rooms"><input class="check" id="rooms" type="checkbox" name="rooms" value="rooms"><div class="checkbox-input"></div>Gitter help rooms</label><br>
+                <label for="videos"><input class="check" id="videos" type="checkbox" name="videos" value="videos"><div class="checkbox-input"></div>Videos</label><br>
+                <label for="meetups"><input class="check" id="meetups" type="checkbox" name="meetups" value="meetups"><div class="checkbox-input"></div>City Meetups</label><br>
+                <label for="wiki"><input class="check" id="wiki" type="checkbox" name="wiki" value="wiki"><div class="checkbox-input"></div>Wiki</label><br>
+                <label for="forum"><input class="check" id="forum" type="checkbox" name="forum" value="forum"><div class="checkbox-input"></div>Forum</label><br>
+                <label for="courses"><input class="check" id="courses" type="checkbox" name="courses" value="courses"><div class="checkbox-input"></div>Additional Courses</label><br>
                 <p>Any comments or suggestions?</p>
                 <textarea name="suggestion" placeholder="Enter your comment here..."></textarea><br>
                 <button type="submit">Submit</button>
