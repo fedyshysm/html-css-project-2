@@ -1,8 +1,59 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap");
 
-body {
-    background: #858585 url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).webp") no-repeat;
-    background-size: cover;
+* {
     font-family: "Fira Sans", sans-serif;
     color: whitesmoke;
 }
+
+body {
+    background: #858585 url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).webp") no-repeat;
+    background-size: cover;
+}
+
+.main {}
+
+.title {}
+
+.title__text {}
+
+.form {}
+
+.form__info {}
+
+.form__info-title {}
+
+.form__info-input {}
+
+.form__option {}
+
+.form__option-title {}
+
+.form__option-select {}
+
+.form__radio {}
+
+.form__radio-title {}
+
+.form__radio-input {}
+
+.form__radio_style_blue {}
+
+.form__check {}
+
+.form__check_text_brackets {}
+
+.form__check-title {}
+
+.form__check-input {}
+
+.form__check_style_blue {}
+
+.form__comments {}
+
+.form__comments-title {}
+
+.form__comments-textarea {}
+
+.form__submit {}
+
+.form__submit_style_blue {}

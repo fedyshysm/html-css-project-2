@@ -6,36 +6,38 @@
   </head>
 
   <body>
-    <div class="flexbox">
+    <div class="main">
       <div class="title">
-        <h1>fedyshysm Survey Form</h1>
-        <p>Thank you for taking the time to help us improve the world</p>
+        <h1 class="title__text">fedyshysm Survey Form</h1>
+        <p class="title__text">
+          Thank you for taking the time to help us improve the world
+        </p>
       </div>
-      <div class="form-block">
+      <div class="form">
         <form action="">
-          <div class="info">
-            <label>Name</label>
+          <div class="form__info">
+            <label class="form__info-title">Name</label>
             <input
-              id="name"
+              class="form__info-input"
               type="text"
               name="name"
               placeholder="Enter your name"
               required
             />
-            <label>Email</label>
+            <label class="form__info-title">Email</label>
             <input
-              id="email"
+              class="form__info-input"
               type="email"
               name="email"
               placeholder="Enter your Email"
               required
             />
-            <label id="number-label">
+            <label class="form__info-title">
               Age
               <nobr class="nobr"> (optional) </nobr>
             </label>
             <input
-              id="number"
+              class="form__info-input"
               type="number"
               name="age"
               min="14"
@@ -44,9 +46,11 @@
             />
           </div>
 
-          <div class="option">
-            <p>Which option best describes your current role?</p>
-            <select id="dropdown">
+          <div class="form__option">
+            <p class="form__option-title">
+              Which option best describes your current role?
+            </p>
+            <select class="form__option-select">
               <option disabled selected>Select current role</option>
               <option>Student</option>
               <option>Full-time job</option>
@@ -56,47 +60,51 @@
             </select>
           </div>
 
-          <div class="radio">
-            <p>Would you recommend fedyshysm to a friend?</p>
+          <div class="form__radio">
+            <p class="form__radio-title">
+              Would you recommend fedyshysm to a friend?
+            </p>
             <label for="definitely">
               <input
-                class="radio-input"
+                class="form__radio-input"
                 id="definitely"
                 type="radio"
                 name="recommend"
                 value="Definitely"
                 checked
               />
-              <div class="recommend"></div>
+              <div class="form__radio_style_blue"></div>
               Definitely
             </label>
             <label for="maybe">
               <input
-                class="radio-input"
+                class="form__radio-input"
                 id="maybe"
                 type="radio"
                 name="recommend"
                 value="Maybe"
               />
-              <div class="recommend"></div>
+              <div class="form__radio_style_blue"></div>
               Maybe
             </label>
             <label for="not-sure">
               <input
-                class="radio-input"
+                class="form__radio-input"
                 id="not-sure"
                 type="radio"
                 name="recommend"
                 value="Not sure"
               />
-              <div class="recommend"></div>
+              <div class="form__radio_style_blue"></div>
               Not sure
             </label>
           </div>
 
-          <div class="select">
-            <p>What is your favorite feature of fedyshysm?</p>
-            <select>
+          <div class="form__option">
+            <p class="form__option-title">
+              What is your favorite feature of fedyshysm?
+            </p>
+            <select class="form__option-select">
               <option disabled selected>Select an option</option>
               <option>Challenges</option>
               <option>Projects</option>
@@ -105,78 +113,138 @@
             </select>
           </div>
 
-          <div class="check">
+          <div class="form__check">
             <p>
               What would you like to see improved?
-              <nobr class="nobr">(Check all that apply)</nobr>
+              <nobr class="form__check_text_brackets"
+                >(Check all that apply)</nobr
+              >
             </p>
-            <label for="frontend">
-              <input type="checkbox" id="frontend" value="frontend" />
-              <div class="checkbox-input"></div>
+            <label class="form__check-title" for="frontend">
+              <input
+                class="form__check-input"
+                type="checkbox"
+                id="frontend"
+                value="frontend"
+              />
+              <div class="form__check_style_blue"></div>
               Front-end Projects
             </label>
-            <label for="backend">
-              <input type="checkbox" id="backend" value="backend" />
-              <div class="checkbox-input"></div>
+            <label class="form__check-title" for="backend">
+              <input
+                class="form__check-input"
+                type="checkbox"
+                id="backend"
+                value="backend"
+              />
+              <div class="form__check_style_blue"></div>
               Back-end Projects
             </label>
-            <label for="data">
-              <input type="checkbox" id="data" value="data" />
-              <div class="checkbox-input"></div>
+            <label class="form__check-title" for="data">
+              <input
+                class="form__check-input"
+                type="checkbox"
+                id="data"
+                value="data"
+              />
+              <div class="form__check_style_blue"></div>
               Data Visualization
             </label>
-            <label for="challenges">
-              <input type="checkbox" id="challenges" value="challenges" />
-              <div class="checkbox-input"></div>
+            <label class="form__check-title" for="challenges">
+              <input
+                class="form__check-input"
+                type="checkbox"
+                id="challenges"
+                value="challenges"
+              />
+              <div class="form__check_style_blue"></div>
               Challenges
             </label>
-            <label for="community">
-              <input type="checkbox" id="community" value="community" />
-              <div class="checkbox-input"></div>
+            <label class="form__check-title" for="community">
+              <input
+                class="form__check-input"
+                type="checkbox"
+                id="community"
+                value="community"
+              />
+              <div class="form__check_style_blue"></div>
               Open Source Community
             </label>
-            <label for="rooms">
-              <input type="checkbox" id="rooms" value="rooms" />
-              <div class="checkbox-input"></div>
+            <label class="form__check-title" for="rooms">
+              <input
+                class="form__check-input"
+                type="checkbox"
+                id="rooms"
+                value="rooms"
+              />
+              <div class="form__check_style_blue"></div>
               Gitter help rooms
             </label>
-            <label for="videos">
-              <input type="checkbox" id="videos" value="videos" />
-              <div class="checkbox-input"></div>
+            <label class="form__check-title" for="videos">
+              <input
+                class="form__check-input"
+                type="checkbox"
+                id="videos"
+                value="videos"
+              />
+              <div class="form__check_style_blue"></div>
               Videos
             </label>
-            <label for="meetups">
-              <input type="checkbox" id="meetups" value="meetups" />
-              <div class="checkbox-input"></div>
+            <label class="form__check-title" for="meetups">
+              <input
+                class="form__check-input"
+                type="checkbox"
+                id="meetups"
+                value="meetups"
+              />
+              <div class="form__check_style_blue"></div>
               City Meetups
             </label>
-            <label for="wiki">
-              <input type="checkbox" id="wiki" value="wiki" />
-              <div class="checkbox-input"></div>
+            <label class="form__check-title" for="wiki">
+              <input
+                class="form__check-input"
+                type="checkbox"
+                id="wiki"
+                value="wiki"
+              />
+              <div class="form__check_style_blue"></div>
               Wiki
             </label>
-            <label for="forum">
-              <input type="checkbox" id="forum" value="forum" />
-              <div class="checkbox-input"></div>
+            <label class="form__check-title" for="forum">
+              <input
+                class="form__check-input"
+                type="checkbox"
+                id="forum"
+                value="forum"
+              />
+              <div class="form__check_style_blue"></div>
               Forum
             </label>
-            <label for="courses">
-              <input type="checkbox" id="courses" value="courses" />
-              <div class="checkbox-input"></div>
+            <label class="form__check-title" for="courses">
+              <input
+                class="form__check-input"
+                type="checkbox"
+                id="courses"
+                value="courses"
+              />
+              <div class="form__check_style_blue"></div>
               Additional Courses
             </label>
           </div>
 
-          <div class="comments">
-            <p>Any comments or suggestions?</p>
+          <div class="form__comments">
+            <p class="form__comments-title">Any comments or suggestions?</p>
             <textarea
-              name="suggestion"
+              class="form__comments-textarea"
+              name="comments"
               placeholder="Enter your comment here..."
             ></textarea>
           </div>
 
-          <div class="submit">
-            <button type="submit">Submit</button>
+          <div class="form__submit">
+            <button class="form__submit_style_blue" type="submit">
+              Submit
+            </button>
           </div>
         </form>
       </div>
