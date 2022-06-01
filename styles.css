@@ -3,6 +3,10 @@
 * {
     font-family: "Fira Sans", sans-serif;
     color: whitesmoke;
+    margin: 0;
+    border-radius: 5px;
+    border: none;
+    padding: 4px 0 2px 0;
 }
 
 body {
@@ -10,27 +14,38 @@ body {
     background-size: cover;
 }
 
-.main {}
+.main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(33, 33, 139, 0.61);
+    width: 60%;
+    padding: 0 2%;
+}
 
-.title {}
+.title__text {
+    text-align: center;
+}
 
-.title__text {}
+.form__info-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+}
 
-.form {}
-
-.form__info {}
-
-.form__info-title {}
-
-.form__info-input {}
-
-.form__option {}
-
-.form__option-title {}
-
-.form__option-select {}
+.form__option-select {
+    color: rgb(13, 13, 79);
+    padding: 10px;
+    width: 100%;
+}
 
 .form__radio {}
+
+.form__radio {
+    display: flex;
+    flex-direction: column;
+}
 
 .form__radio-title {}
 
