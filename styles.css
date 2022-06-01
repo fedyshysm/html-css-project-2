@@ -15,7 +15,7 @@ body {
 }
 
 .main {
-    margin: 0 auto;
+    margin: 5px auto 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,8 +50,6 @@ body {
 .form__radio-title {}
 
 .form__radio-input {}
-
-.form__radio_style_blue {}
 
 .form__check {}
 
