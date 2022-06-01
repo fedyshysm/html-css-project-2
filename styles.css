@@ -69,4 +69,11 @@ body {
 
 .form__submit {}
 
-.form__submit_style_blue {}
+.form__submit_style_blue {
+    background-color: rgba(60, 60, 210, 0.557);
+    border-style: solid;
+    border-color: rgba(86, 104, 163, 0.659);
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+}
