@@ -3,7 +3,7 @@
 * {
     font-family: "Fira Sans", sans-serif;
     color: whitesmoke;
-    margin: 0;
+    margin: 1px;
     border-radius: 5px;
     border: none;
     padding: 4px 0 2px 0;
@@ -35,9 +35,14 @@ body {
 }
 
 .form__option-select {
-    color: rgb(13, 13, 79);
     padding: 10px;
     width: 100%;
+}
+
+.form__info-input,
+.form__option-select,
+.form__comments-textarea {
+    color: rgb(20, 20, 106);
 }
 
 .form__radio {}
