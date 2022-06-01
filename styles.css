@@ -65,7 +65,11 @@ body {
 
 .form__comments-title {}
 
-.form__comments-textarea {}
+.form__comments-textarea {
+    padding: 10px;
+    width: calc(100% - 20px);
+    height: 10vh;
+}
 
 .form__submit {}
 
