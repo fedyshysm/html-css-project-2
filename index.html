@@ -1,229 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Survey Form</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-        body {
-            background: #858585 url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).webp") no-repeat;
-            background-size: cover;
-        }
-        .inner {
-            background-color: #06123dd4;
-            border-radius: 4px;
-            margin: 0 auto;
-            width: 560px;
-            padding: 20px 8px 20px 10px;
-        }
-        #title {
-            text-align: center;
-            color: #06123d;
-            font-family: "Fira Sans", sans-serif;
-            font-weight: 500;
-        }
-        #description {
-            text-align: center;
-            color: #06123d;
-            font-family: "Fira Sans", sans-serif;
-            font-weight: 500;
-            font-size: 25px;
-        }
-        p {
-            font-family: "Fira Sans", sans-serif;
-            color: whitesmoke;
-            font-weight: 300;
-            font-size: 20px;
-            margin-left: 10px;
-        }
-        label {
-            font-family: "Fira Sans", sans-serif;
-            color: whitesmoke;
-            font-weight: 100;
-            font-size: 17px;
-            cursor: pointer;
-        }
-        #name-label {
-            font-family: "Fira Sans", sans-serif;
-            color: whitesmoke;
-            font-weight: 300;
-            font-size: 20px;
-            margin-left: 10px;    
-        }
-        #email-label {
-            font-family: "Fira Sans", sans-serif;
-            color: whitesmoke;
-            font-weight: 300;
-            font-size: 20px;
-            margin-left: 10px; 
-        }
-        #number-label {
-            font-family: "Fira Sans", sans-serif;
-            color: whitesmoke;
-            font-weight: 300;
-            font-size: 20px;
-            margin-left: 10px; 
-        }
-        .nobr {
-            font-family: "Fira Sans", sans-serif;
-            color: whitesmoke;
-            font-weight: 100;
-            font-size: 17px;
-        }    
-        .info {
-            padding: 10px;
-            width: 92%;
-            margin-left: 10px;
-            border-style: solid;
-            border-radius: 6px;
-            border-color: whitesmoke;
-            margin-top: 7px;
-            margin-bottom: 15px;
-        }
-        .radio-input {
-            display: none;
-        }
-        .check {
-            display: none;
-        }
-        .recommend {
-            display: inline-block;
-            border: 2px solid #2c375f;
-            width: 20px;
-            height: 20px;
-            position: relative;
-            vertical-align: middle;
-            box-sizing: border-box;
-            border-radius: 300px;
-            margin: -1px 5px 5px 10px;
-            background-color: whitesmoke;
-        }
-        .checkbox-input {
-            display: inline-block;
-            border: 2px solid #2c375f;
-            width: 20px;
-            height: 20px;
-            position: relative;
-            vertical-align: middle;
-            box-sizing: border-box;
-            border-radius: 5px;
-            margin: -1px 5px 5px 10px;
-            background-color: whitesmoke;
-        }
-        .recommend:before {
-            content: '';
-            background: #18318d;
-            width: 10px;
-            height: 10px;
-            opacity: 0;
-            transition: 0.1s;
-            position: absolute;
-            top: 3px;
-            right: 3px;
-            border-radius: 300px;
-        }
-        .checkbox-input:before {
-            content: '';
-            background: #18318d;
-            width: 10px;
-            height: 10px;
-            opacity: 0;
-            transition: 0.1s;
-            position: absolute;
-            top: 3px;
-            right: 3px;
-            border-radius: 3px;
-        }
-        input:checked + .recommend:before {
-            opacity: 1;
-        }
-        input:checked + .checkbox-input:before {
-            opacity: 1;
-        }
-        select {
-            padding: 10px;
-            width: 96.4%;
-            font-size: 14px;
-            color: #757575;
-            margin-left: 10px;
-            border-style: solid;
-            border-radius: 6px;
-            border-color: whitesmoke;
-        }
-        textarea {
-            overflow: auto;
-            resize: none;
-            width: 94%;
-            height: 100px;
-            margin-left: 10px;
-            border-radius: 6px;
-            padding: 8px 0px 8px 10px;
-            font-family: sans-serif;
-            font-size: 13.5px;
-        }
-        button {
-            cursor: pointer;
-            margin: 20px 0px 15px 10px;
-            padding: 10px;
-            width: 96%;
-            font-family: "Fira Sans", sans-serif;
-            font-size: 20px;
-            align-items: center;
-            font-weight: 400;
-            color: whitesmoke;
-            background-color: #2a3c7cd4;
-            border: 2px solid #44569a;
-            border-radius: 6px;
-        }
-    </style>
-</head>
-<body>
-    <div class="outer">
-        <h1 id="title">fedyshysm Survey Form</h1>
-        <p id="description">Thank you for taking the time to help us improve the world</p>   
-        <div class="inner">
-            <form id="survey-form" action="">
-                <label id="name-label">Name</label><input class="info" id="name" type="text" name="name" placeholder="Enter your name" required>
-                <label id="email-label">Email</label><input class="info" id="email" type="email" name="email" placeholder="Enter your Email" required>
-                <label id="number-label">Age <nobr class="nobr">(optional)</nobr></label> <input class="info" id="number" type="number" name="age" min="14" max="120" placeholder="Enter your age">
-                <p>Which option best describes your current role?</p>
-                <select id="dropdown">
-                    <option disabled selected>Select current role</option>
-                    <option>Student</option>
-                    <option>Full-time job</option>
-                    <option>Full-time learner</option>
-                    <option>Prefer not to say</option>
-                    <option>Other</option>
-                </select>   
-                <p>Would you recommend fedyshysm to a friend?</p>
-                <label for="definitely"><input class="radio-input" id="definitely" type="radio" name="recommend" value="Definitely" checked><div class="recommend"></div>Definitely</label><br>
-                <label for="maybe"><input class="radio-input" id="maybe" type="radio" name="recommend" value="Maybe"><div class="recommend"></div>Maybe</label><br>
-                <label for="not-sure"><input class="radio-input" id="not-sure" type="radio" name="recommend" value="Not sure"><div class="recommend"></div>Not sure</label><br>
-                <p>What is your favorite feature of fedyshysm?</p>
-                <select>
-                    <option disabled selected>Select an option</option>
-                    <option>Challenges</option>
-                    <option>Projects</option>
-                    <option>Community</option>
-                    <option>Open source</option>
-                </select>   
-                <p>What would you like to see improved? <nobr class="nobr">(Check all that apply)</nobr></p>
-                <label for="frontend"><input class="check" id="frontend" type="checkbox" name="frontend" value="frontend"><div class="checkbox-input"></div>Front-end Projects</label><br>
-                <label for="backend"><input class="check" id="backend" type="checkbox" name="backend" value="backend"><div class="checkbox-input"></div>Back-end Projects</label><br>
-                <label for="data"><input class="check" id="data" type="checkbox" name="data" value="data"><div class="checkbox-input"></div>Data Visualization</label><br>
-                <label for="challenges"><input class="check" id="challenges" type="checkbox" name="challenges" value="challenges"><div class="checkbox-input"></div>Challenges</label><br>
-                <label for="community"><input class="check" id="community" type="checkbox" name="community" value="community"><div class="checkbox-input"></div>Open Source Community</label><br>
-                <label for="rooms"><input class="check" id="rooms" type="checkbox" name="rooms" value="rooms"><div class="checkbox-input"></div>Gitter help rooms</label><br>
-                <label for="videos"><input class="check" id="videos" type="checkbox" name="videos" value="videos"><div class="checkbox-input"></div>Videos</label><br>
-                <label for="meetups"><input class="check" id="meetups" type="checkbox" name="meetups" value="meetups"><div class="checkbox-input"></div>City Meetups</label><br>
-                <label for="wiki"><input class="check" id="wiki" type="checkbox" name="wiki" value="wiki"><div class="checkbox-input"></div>Wiki</label><br>
-                <label for="forum"><input class="check" id="forum" type="checkbox" name="forum" value="forum"><div class="checkbox-input"></div>Forum</label><br>
-                <label for="courses"><input class="check" id="courses" type="checkbox" name="courses" value="courses"><div class="checkbox-input"></div>Additional Courses</label><br>
-                <p>Any comments or suggestions?</p>
-                <textarea name="suggestion" placeholder="Enter your comment here..."></textarea><br>
-                <button type="submit">Submit</button>
-            </form> 
-        </div>
-    </div>     
-</body>
+  <body>
+    <div class="main">
+      <div class="title">
+        <h1 class="title__text">fedyshysm Survey Form</h1>
+        <p class="title__text">
+          Thank you for taking the time to help us improve the world
+        </p>
+      </div>
+      <div class="form">
+        <form action="">
+          <div class="form__info">
+            <div class="form__info-data">
+              <div class="form__info-title">Name</div>
+              <input
+                class="form__info-input"
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="form__info-data">
+              <div class="form__info-title">Email</div>
+              <input
+                class="form__info-input"
+                type="email"
+                name="email"
+                placeholder="Enter your Email"
+                required
+              />
+            </div>
+            <div class="form__info-data">
+              <div class="form__info-title">
+                Age
+                <nobr class="form__info_text_brackets"> (optional) </nobr>
+              </div>
+              <input
+                class="form__info-input"
+                type="number"
+                name="age"
+                min="14"
+                max="120"
+                placeholder="Enter your age"
+              />
+            </div>
+          </div>
+
+          <div class="form__option">
+            <p class="form__option-title">
+              Which option best describes your current role?
+            </p>
+            <select class="form__option-select">
+              <option disabled selected>Select current role</option>
+              <option>Student</option>
+              <option>Full-time job</option>
+              <option>Full-time learner</option>
+              <option>Prefer not to say</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form__radio">
+            <p class="form__radio-title">
+              Would you recommend fedyshysm to a friend?
+            </p>
+            <div class="form__radio-element">
+              <input
+                class="form__radio_style_blue"
+                type="radio"
+                name="recommend"
+                value="Definitely"
+                checked
+              />
+              Definitely
+            </div>
+            <div>
+              <input
+                class="form__radio_style_blue"
+                type="radio"
+                name="recommend"
+                value="Maybe"
+              />
+              Maybe
+            </div>
+            <div class="form__radio-element">
+              <input
+                class="form__radio_style_blue"
+                id="not-sure"
+                type="radio"
+                name="recommend"
+                value="Not sure"
+              />
+              Not sure
+            </div>
+          </div>
+
+          <div class="form__option">
+            <p class="form__option-title">
+              What is your favorite feature of fedyshysm?
+            </p>
+            <select class="form__option-select">
+              <option disabled selected>Select an option</option>
+              <option>Challenges</option>
+              <option>Projects</option>
+              <option>Community</option>
+              <option>Open source</option>
+            </select>
+          </div>
+
+          <div class="form__check">
+            <p>
+              What would you like to see improved?
+              <nobr class="form__check_text_brackets"
+                >(Check all that apply)</nobr
+              >
+            </p>
+            <div class="form__check-title">
+              <input
+                class="form__check_style_blue"
+                type="checkbox"
+                id="frontend"
+                value="frontend"
+              />
+              Front-end Projects
+            </div>
+            <div class="form__check-title">
+              <input
+                class="form__check_style_blue"
+                type="checkbox"
+                id="backend"
+                value="backend"
+              />
+              Back-end Projects
+            </div>
+            <div class="form__check-title">
+              <input
+                class="form__check_style_blue"
+                type="checkbox"
+                id="data"
+                value="data"
+              />
+              Data Visualization
+            </div>
+            <div class="form__check-title">
+              <input
+                class="form__check_style_blue"
+                type="checkbox"
+                id="challenges"
+                value="challenges"
+              />
+              Challenges
+            </div>
+            <div class="form__check-title">
+              <input
+                class="form__check_style_blue"
+                type="checkbox"
+                id="community"
+                value="community"
+              />
+              Open Source Community
+            </div>
+            <div class="form__check-title">
+              <input
+                class="form__check_style_blue"
+                type="checkbox"
+                id="rooms"
+                value="rooms"
+              />
+              Gitter help rooms
+            </div>
+            <div class="form__check-title">
+              <input
+                class="form__check_style_blue"
+                type="checkbox"
+                id="videos"
+                value="videos"
+              />
+              Videos
+            </div>
+            <div class="form__check-title">
+              <input
+                class="form__check_style_blue"
+                type="checkbox"
+                id="meetups"
+                value="meetups"
+              />
+              City Meetups
+            </div>
+            <div class="form__check-title">
+              <input
+                class="form__check_style_blue"
+                type="checkbox"
+                id="wiki"
+                value="wiki"
+              />
+              Wiki
+            </div>
+            <div class="form__check-title">
+              <input
+                class="form__check_style_blue"
+                type="checkbox"
+                id="forum"
+                value="forum"
+              />
+              Forum
+            </div>
+            <div class="form__check-title">
+              <input
+                class="form__check_style_blue"
+                type="checkbox"
+                id="courses"
+                value="courses"
+              />
+              Additional Courses
+            </div>
+          </div>
+
+          <div class="form__comments">
+            <p class="form__comments-title">Any comments or suggestions?</p>
+            <textarea
+              class="form__comments-textarea"
+              name="comments"
+              placeholder="Enter your comment here..."
+            ></textarea>
+          </div>
+
+          <div class="form__submit">
+            <button class="form__submit_style_blue" type="submit">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

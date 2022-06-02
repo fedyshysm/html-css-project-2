@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap");
+
+* {
+    font-family: "Fira Sans", sans-serif;
+    color: whitesmoke;
+    margin: 1px;
+    border-radius: 5px;
+    border: none;
+    padding: 4px 0 2px 0;
+}
+
+body {
+    background: #858585 url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).webp") no-repeat;
+    background-size: cover;
+}
+
+.main {
+    margin: 5px auto 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(33, 33, 139, 0.61);
+    width: 400px;
+    padding: 0 2%;
+}
+
+.title__text {
+    text-align: center;
+}
+
+.form__info_text_brackets,
+.form__check_text_brackets {
+    font-size: 11px;
+}
+
+.form__info-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+}
+
+.form__option-select {
+    padding: 10px;
+    width: 100%;
+}
+
+.form__info-input,
+.form__option-select,
+.form__comments-textarea {
+    color: rgb(20, 20, 106);
+}
+
+.form__radio {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__comments-textarea {
+    padding: 10px;
+    width: calc(100% - 20px);
+    height: 10vh;
+}
+
+.form__submit_style_blue {
+    background-color: rgba(60, 60, 210, 0.557);
+    border-style: solid;
+    border-color: rgba(86, 104, 163, 0.659);
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.form__submit_style_blue:hover {
+    background-color: rgba(24, 24, 188, 0.667);
+
+}
+
+.form__submit_style_blue:focus {
+    background-color: rgba(25, 31, 125, 0.853);
+}
+
+@media (max-width: 890px) {
+    .main {
+        width: 90%;
+    }
+}
