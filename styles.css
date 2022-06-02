@@ -21,7 +21,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgba(33, 33, 139, 0.61);
-    width: 40%;
+    width: 400px;
     padding: 0 2%;
 }
 
@@ -63,6 +63,15 @@ body {
     padding: 10px;
     margin: 5px 0;
     width: 100%;
+}
+
+.form__submit_style_blue:hover {
+    background-color: rgba(24, 24, 188, 0.667);
+
+}
+
+.form__submit_style_blue:focus {
+    background-color: rgba(25, 31, 125, 0.853);
 }
 
 @media (max-width: 890px) {
