@@ -29,6 +29,11 @@ body {
     text-align: center;
 }
 
+.form__info_text_brackets,
+.form__check_text_brackets {
+    font-size: 11px;
+}
+
 .form__info-input {
     width: calc(100% - 20px);
     padding: 10px;
